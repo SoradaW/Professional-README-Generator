@@ -1,0 +1,23 @@
+{
+  "name": "static-site",
+  "version": "1.0.0",
+  "description": "## Working with ES6 & Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SWright",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^6.5.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoradaW/Professional-README-Generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SoradaW/Professional-README-Generator/issues"
+  },
+  "homepage": "https://github.com/SoradaW/Professional-README-Generator#readme"
+}
