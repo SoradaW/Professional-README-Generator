@@ -57,6 +57,19 @@ const questions = [
     message: 'Choose a license of your project.',
     choices: ['None', 'Apache License 2.0', 'GNU General Public License v3.0', 'MIT License', 'BSD 2-Clause "Simplified" License', 'BSD 3-Clause "New" or "Revised" License', 'Boost Software License 1.0', 'Mozilla Public License 2.0', 'The Unlicense'],
   },
+  {
+    type: 'input',
+    name: 'questions',
+    message: 'What is your GitHub username?',
+    message: 'What is your Email address?',
+    default: 'SoradaW',
+    validate: function (answer) {
+      if (answer.length < 1) {
+        return console.log("A valid information is required.");
+      }
+      return true;
+    }
+  }
 ];
 
 // function to write README file 
