@@ -60,9 +60,10 @@ const questions = [
   {
     type: 'input',
     name: 'questions',
-    message: 'What is your GitHub username?',
-    message: 'What is your Email address?',
-    default: 'SoradaW',
+    message: {
+      gitHUb: 'What is your GitHub username?',
+      email: 'What is your Email address?',
+    },
     validate: function (answer) {
       if (answer.length < 1) {
         return console.log("A valid information is required.");
@@ -88,9 +89,31 @@ const writeFileAsync = util.promisify(writeToFile);
 
 // function to initialize program
 // try catch finally in node.js handle runtime errors
-function init() {
+// async makes a function return a Promise
+async function init() {
+  try {
+    // prompt inquirer questions
+    // await makes a function wait for a Promise
+    const userResponses = await inquirer.prompt(questions);
+    console.log("Your responses: ", userResponses);
+    console.log("Thank you for your responses! Fecthing your GitHub data next...");
 
-}
+    // call github api for user info
+    const userInfo = await appendFile.getUser(userResponses);
+    console.log("Your GitHub user info: ", userInfo);
+
+    // pass inquirer userResponses and GitHub userInfo to generateMarkdown
+    console.log("Generating your README next...")
+    const markdown = generateMarkdown(userResponses, userInfo);
+    console.log(markdown);
+
+    // write markdown to file
+    await writeFileAsync('exampleREADME.md', markdown);
+  } 
+    catch (error) {
+    console.log(error);
+  }
+};
 
 // function call to initialize program
 init();
