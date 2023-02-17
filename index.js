@@ -59,11 +59,22 @@ const questions = [
   },
 ];
 
-// function to write README file
+// function to write README file 
+// fs.writeFile() method replaces the specified file and content
 function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, error => {
+    if (error) {
+      return console.log(error);
+    }
+    console.log("Congrat! Your README.md file has been generated")
+  });
 }
 
+// node.js' built-in util package has a promisify() function that converts callback-based functions to promise-based functions. This lets you use promise chaining and async/await with callback-based APIs.
+const writeFileAsync = util.promisify(writeToFile);
+
 // function to initialize program
+// try catch finally in node.js handle runtime errors
 function init() {
 
 }
