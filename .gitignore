@@ -1,1 +1,3 @@
 node_modules
+.env 
+#The .env file is typically used for the configuration of your application, which often includes sensitive information like database credentials and API keys. Even if your Git repo is not public, it is a best practice to exclude this information from your repository
