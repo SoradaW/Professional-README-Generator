@@ -1,38 +1,45 @@
 // function to generate markdown for README
-function generateMarkdown(userResponses, usergitHubURL) {
+function generateMarkdown(userResponses, userGitHubURL) {
   
   // generate table of contents 
   let tableOfContents = `## Table of Contents`;
 
-  if (userResponses.installation !== '') {
-    tableOfContents += `* [Installation](#installation)`
-  };
+  if (userResponses.installation !== '') {tableOfContents += `
+  * [Installation](#installation)`};
 
-  if (userResponses.installation !== '') {
-    tableOfContents += `* [Usage](#usage)`
-  };
+  if (userResponses.usage !== '') {tableOfContents += `
+  * [Usage](#usage)`};
 
-  if (userResponses.installation !== '') {
-    tableOfContents += `* [Contributing](#contributing)`
-  };
+  if (userResponses.contributing !== '') {tableOfContents += `
+  * [Contributing](#contributing)`};
 
-  if (userResponses.installation !== '') {
-    tableOfContents += `* [Tests](#tests)`
-  };
+  if (userResponses.tests !== '') {tableOfContents += `
+  * [Tests](#tests)`};
 
-  if (userResponses.installation !== '') {
-    tableOfContents += `* [License](#license)`
-  };
+  if (userResponses.license !== '') {tableOfContents += `
+  * [License](#license)`};
 
-  if (userResponses.installation !== '') {
-    tableOfContents += `* [Questions](#questions)`
-  };
+  if (userResponses.questions !== '') {tableOfContents += `
+  * [Questions](#questions)`};
 
+  // generate markdown title and description at the top
+  let draftMarkdown = `
+  # ${userResponses.title}
 
+  ## Description
+  ${userResponses.description}
+  `
 
-  return `# ${data.title}
+  // table of contents 
+  draftMarkdown += tableOfContents;
 
-`;
-}
+  // license section
+  draftMarkdown += `
+  * [License](#license)
+  `;
+
+  // return markdown file
+  return draftMarkdown;
+};
 
 module.exports = generateMarkdown;

@@ -13,7 +13,7 @@ const questions = [
     name: 'title',
     message: 'What is your project title?', 
     validate: function (answer) {
-      if (answer.length < 1) {
+      if (answer.length < 3) {
         return console.log("A valid project title is required.");
       }
       return true;
@@ -24,7 +24,7 @@ const questions = [
     name: 'description',
     message: 'Write a description of your project.',
     validate: function (answer) {
-      if (answer.length < 1) {
+      if (answer.length < 10) {
         return console.log("A valid project description is required.")
       }
       return true;
@@ -96,16 +96,16 @@ async function init() {
     console.log("Thank you for your responses! Fecthing your GitHub data next...");
 
     // call github url for user info
-    const usergitHubURL = await gitHubURL.getUser(userResponses);
-    console.log("Your GitHub user info: ", usergitHubURL);
+    const userGitHubURL = await gitHubURL.getUser(userResponses);
+    console.log("Your GitHub user info: ", userGitHubURL);
 
     // pass inquirer userResponses and GitHub userInfo to generateMarkdown
     console.log("Generating your README next...")
-    const markdown = generateMarkdown(userResponses, usergitHubURL);
+    const markdown = generateMarkdown(userResponses, userGitHubURL);
     console.log(markdown);
 
     // write markdown to file
-    await writeFileAsync('exampleREADME.md', markdown);
+    await writeFileAsync('demoREADME.md', markdown);
   } 
     catch (error) {
     console.log(error);
