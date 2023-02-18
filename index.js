@@ -54,7 +54,7 @@ const questions = [
     type: 'list',
     name: 'license',
     message: 'Choose a license of your project.',
-    choices: ['None', 'Apache License 2.0', 'GNU General Public License v3.0', 'MIT License', 'BSD 2-Clause "Simplified" License', 'BSD 3-Clause "New" or "Revised" License', 'Boost Software License 1.0', 'Mozilla Public License 2.0', 'The Unlicense'],
+    choices: ['None', 'Apache-2.0', 'GNU General Public v3.0', 'MIT', 'BSD 2-Clause "Simplified"', 'BSD 3-Clause "New" or "Revised"', 'Boost Software 1.0', 'Mozilla Public 2.0', 'The Unlicense'],
   },
   {
     type: 'input',
