@@ -4,7 +4,7 @@ const path = require('path');
 const util = require('util');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown.js"); //internal
-const gitHubLink = require('./utils/githubURL.js'); //internal
+
 
 // array of questions prompts for user responses
 const questions = [
@@ -54,7 +54,7 @@ const questions = [
     type: 'list',
     name: 'license',
     message: 'Choose a license of your project.',
-    choices: ['None', 'Apache-2.0', 'GNU General Public v3.0', 'MIT', 'BSD 2-Clause "Simplified"', 'BSD 3-Clause "New" or "Revised"', 'Boost Software 1.0', 'Mozilla Public 2.0', 'The Unlicense'],
+    choices: ['None', 'Apache 2.0', 'GNU General Public v3.0', 'MIT', 'BSD 2-Clause "Simplified"', 'BSD 3-Clause "New" or "Revised"', 'Boost Software 1.0', 'Mozilla Public 2.0', 'The Unlicense'],
   },
   {
     type: 'input',

@@ -18,11 +18,11 @@ function generateMarkdown(userResponses, userGitHubLink) {
   * [Questions](#questions)`};
 
   // generate markdown title, badge license and description at the top
-  // ${userResponses.license} = $%7BuserResponses.license%7D
+  // badde hosting by shields.io
   let draftMarkdown = `
   # ${userResponses.title}
 
-  ![Badge of repo license](https://img.shields.io/badge/License-${userResponses.license}-green.svg)
+  ![Badge of repo license](https://img.shields.io/badge/License-${userResponses.license}-yellowgreen.svg)
 
   ## Description
 
@@ -95,11 +95,9 @@ function generateMarkdown(userResponses, userGitHubLink) {
 
   ## Questions?
 
-  *For any questions, click on the links below:*
+  *Take a look at* [My Github](${userResponses.github})
 
-  GitHub: [[My Github](${userResponses.github})]
-
-  Email: [[Email](${userResponses.questions})]
+  *Any futher questions, please* [Email Me](${userResponses.questions})
   `
   // return markdown file
   return draftMarkdown;
