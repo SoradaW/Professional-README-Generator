@@ -58,7 +58,7 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'questions',
+    name: 'github',
     message: 'What is your GitHub username?',
     default: 'SoradaW'
   },
@@ -81,7 +81,7 @@ function writeToFile(fileName, data) {
   });
 }
 
-// node.js' built-in util package has a promisify() function that converts callback-based functions to promise-based functions. This lets you use promise chaining and async/await with callback-based APIs.
+// node.js' built-in util package has a promisify() function that converts callback-based functions to promise-based functions. This lets you use promise chaining and async/await with callback-based APIs(githubURL.js).
 const writeFileAsync = util.promisify(writeToFile);
 
 // function to initialize program

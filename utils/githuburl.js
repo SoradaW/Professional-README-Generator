@@ -5,7 +5,7 @@ const gitHubURL = {
     try { let response = await axios
         
       // Sample URL: https://github.com/SoradaW
-      .get(`https://github.com/${userResponses}`);
+      .get(`https://github.com/users/${userResponses.username}`);
         return response.data;
 
       } catch (error) {
