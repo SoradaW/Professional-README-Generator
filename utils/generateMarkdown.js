@@ -21,7 +21,7 @@ function generateMarkdown(userResponses, userGitHubLink) {
   let draftMarkdown = `
   # ${userResponses.title}
 
-  ![Badge of repo licence](https://img.shields.io/badge/Licence-${userResponses.license}-green.svg)
+  ![Badge of repo licence](https://img.shields.io/badge/{Licence}/${userResponses.license}-green.svg)
 
   ## Description
 
@@ -97,7 +97,7 @@ function generateMarkdown(userResponses, userGitHubLink) {
 
   *For any questions, click on the links below:*
 
-  GitHub: ${userResponses.github}
+  GitHub: [My GitHub]${userResponses.github}
   `;
   
   // contact email

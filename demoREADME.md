@@ -1,7 +1,7 @@
 
-  # README test
+  # Test README
 
-  ![Badge of repo licence](https://img.shields.io/badge/Licence-MIT License-green.svg)
+  ![Badge of repo licence](https://img.shields.io/badge/{Licence}/MIT License-green.svg)
 
   ## Description
 
@@ -49,7 +49,7 @@
 
   *For any questions, click on the links below:*
 
-  GitHub: https://github.com/SoradaW
+  GitHub: [My GitHub]https://github.com/SoradaW
   
   Email: sorada.wright@gmail.com
   
