@@ -17,10 +17,12 @@ function generateMarkdown(userResponses, userGitHubURL) {
   if (userResponses.questions !== '') {tableOfContents += `
   * [Questions](#questions)`};
 
-  // generate markdown title and description at the top
+  // generate markdown title, badge license and description at the top
   let draftMarkdown = `
   # ${userResponses.title}
 
+  ![Badge of repo licence](https://img.shields.io/badge/${userResponses.license})
+  
   ## Description
 
   *The what, why, and how:*
@@ -41,7 +43,7 @@ function generateMarkdown(userResponses, userGitHubURL) {
   draftMarkdown += `
   ## Installation
     
-  *Installation instructions*
+  *Installation instructions:*
     
   ${userResponses.installation}
   `
@@ -52,7 +54,7 @@ function generateMarkdown(userResponses, userGitHubURL) {
   draftMarkdown += `
   ## Usage
       
-  *Usage information*
+  *Usage information:*
       
   ${userResponses.usage}
   `
@@ -63,7 +65,7 @@ function generateMarkdown(userResponses, userGitHubURL) {
   draftMarkdown += `
   ## Contributing
       
-  *Contribution guidelines*
+  *Contribution guidelines:*
       
   ${userResponses.contributing}
   `
@@ -74,7 +76,7 @@ function generateMarkdown(userResponses, userGitHubURL) {
   draftMarkdown += `
   ## Tests
       
-  *Test instructions*
+  *Test instructions:*
       
   ${userResponses.tests}
   `
@@ -82,7 +84,7 @@ function generateMarkdown(userResponses, userGitHubURL) {
 
   // license section
   draftMarkdown += `
-  ## license
+  ## License
         
   ${userResponses.license}
   `;
@@ -97,7 +99,7 @@ function generateMarkdown(userResponses, userGitHubURL) {
   ${userResponses.questions}
   `
   };
-  
+
   // return markdown file
   return draftMarkdown;
 };
