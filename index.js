@@ -4,7 +4,7 @@ const path = require('path');
 const util = require('util');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown.js"); //internal
-const gitHubURL = require('./utils/githubURL.js'); //internal
+const gitHubLink = require('./utils/githubURL.js'); //internal
 
 // array of questions prompts for user responses
 const questions = [
@@ -60,7 +60,7 @@ const questions = [
     type: 'input',
     name: 'github',
     message: 'What is your GitHub username?',
-    default: 'SoradaW'
+    default: 'https://github.com/SoradaW'
   },
   {
     type: 'input',
@@ -95,13 +95,10 @@ async function init() {
     console.log("Your responses: ", userResponses);
     console.log("Thank you for your responses! Fecthing your GitHub data next...");
 
-    // call github url for user info
-    const userGitHubURL = await gitHubURL.getUser(userResponses);
-    console.log("Your GitHub user info: ", userGitHubURL);
 
     // pass inquirer userResponses and GitHub userInfo to generateMarkdown
     console.log("Generating your README next...")
-    const markdown = generateMarkdown(userResponses, userGitHubURL);
+    const markdown = generateMarkdown(userResponses);
     console.log(markdown);
 
     // write markdown to file

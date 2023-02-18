@@ -1,11 +1,11 @@
 const axios = require('axios');
 
-const gitHubURL = {
+const gitHubLink = {
   async getUser(userResponses) {
     try { let response = await axios
         
-      // Sample URL: https://github.com/SoradaW
-      .get(`https://github.com/users/${userResponses.username}`);
+      // Ex. API: https://api.github.com/users/SoradaW
+      .get(`https://api.github.com/users/${userResponses.username}`);
         return response.data;
 
       } catch (error) {
@@ -14,4 +14,4 @@ const gitHubURL = {
   }
 };
 
-module.exports = gitHubURL;
+module.exports = gitHubLink;

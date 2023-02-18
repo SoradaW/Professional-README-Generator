@@ -1,5 +1,5 @@
 // function to generate markdown for README
-function generateMarkdown(userResponses, userGitHubURL) {
+function generateMarkdown(userResponses, userGitHubLink) {
   
   // generate table of contents 
   let tableOfContents = `## Table of Contents`;
@@ -97,7 +97,7 @@ function generateMarkdown(userResponses, userGitHubURL) {
 
   *For any questions, click on the links below:*
 
-  GitHub: ${userGitHubURL}
+  GitHub: ${userResponses.github}
   `;
   
   // contact email

@@ -1,5 +1,5 @@
 
-  # adsgh
+  # README test
 
   ![Badge of repo licence](https://img.shields.io/badge/Licence-MIT License-green.svg)
 
@@ -49,8 +49,7 @@
 
   *For any questions, click on the links below:*
 
-  GitHub: undefined
+  GitHub: https://github.com/SoradaW
   
-    
   Email: sorada.wright@gmail.com
   
