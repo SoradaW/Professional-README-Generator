@@ -3,7 +3,8 @@ const fs = require("fs");
 const path = require('path');
 const util = require('util');
 const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown.js"); //internal
+const gitHubURL = require('./utils/githuburl.js'); //internal
 
 // array of questions prompts for user responses
 const questions = [
@@ -94,13 +95,13 @@ async function init() {
     console.log("Your responses: ", userResponses);
     console.log("Thank you for your responses! Fecthing your GitHub data next...");
 
-    // call github api for user info
-    const userInfo = await appendFile.getUser(userResponses);
-    console.log("Your GitHub user info: ", userInfo);
+    // call github url for user info
+    const usergitHubURL = await gitHubURL.getUser(userResponses);
+    console.log("Your GitHub user info: ", usergitHubURL);
 
     // pass inquirer userResponses and GitHub userInfo to generateMarkdown
     console.log("Generating your README next...")
-    const markdown = generateMarkdown(userResponses, userInfo);
+    const markdown = generateMarkdown(userResponses, usergitHubURL);
     console.log(markdown);
 
     // write markdown to file
