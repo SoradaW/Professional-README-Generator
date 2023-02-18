@@ -27,16 +27,35 @@ function generateMarkdown(userResponses, userGitHubURL) {
   # ${userResponses.title}
 
   ## Description
+
+  *The what, why, and how:*
+
   ${userResponses.description}
   `
 
   // table of contents 
   draftMarkdown += tableOfContents;
 
-  // license section
+  // license section as it required
   draftMarkdown += `
   * [License](#license)
   `;
+
+  // if applicable questions
+  // installation section
+  if (userResponses.installation !== '') {
+    draftMarkdown += `
+    ## Installation
+    
+    *Steps required to install the project*
+    
+    ${userResponses.installation}
+    `
+  };
+  // usage section
+  // contributing section
+  // tests section
+  // questions section
 
   // return markdown file
   return draftMarkdown;
