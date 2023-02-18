@@ -21,7 +21,7 @@ function generateMarkdown(userResponses, userGitHubLink) {
   let draftMarkdown = `
   # ${userResponses.title}
 
-  ![Badge of repo licence](https://img.shields.io/badge/{Licence}/${userResponses.license}-green.svg)
+  ![Badge of repo licence](https://img.shields.io/badge/Licence-MIT/${userResponses.license}-green.svg)
 
   ## Description
 
@@ -90,26 +90,16 @@ function generateMarkdown(userResponses, userGitHubLink) {
   `;
 
   // questions section
-  let queContact = `
-  ---
+  draftMarkdown += `
 
   ## Questions?
 
   *For any questions, click on the links below:*
 
   GitHub: [My GitHub]${userResponses.github}
-  `;
-  
-  // contact email
-  if (userResponses.questions !== '') {
-  queContact += `
+
   Email: ${userResponses.questions}
   `
-  };
-
-  // add queContact to markdown
-  draftMarkdown += queContact;
-
   // return markdown file
   return draftMarkdown;
 };
