@@ -11,7 +11,6 @@ const questions = [
     type: 'input',
     name: 'title',
     message: 'What is your project title?', 
-    default: 'Project Title',
     validate: function (answer) {
       if (answer.length < 1) {
         return console.log("A valid project title is required.");
@@ -23,7 +22,6 @@ const questions = [
     type: 'input',
     name: 'description',
     message: 'Write a description of your project.',
-    default: 'Project Description',
     validate: function (answer) {
       if (answer.length < 1) {
         return console.log("A valid project description is required.")
@@ -34,22 +32,22 @@ const questions = [
   {
     type: 'input',
     name: 'installation',
-    message: 'If applicable, describe the steps required to install your project.',
+    message: 'Describe the steps required to install your project (if applicable).',
   },
   {
     type: 'input',
     name: 'usage',
-    message: 'If applicable, provide instructions and examples of your project in use.',
+    message: 'Provide instructions and examples of your project in use (if applicable).',
   },
   {
     type: 'input',
     name: 'contributing',
-    message: 'If applicable, provide guidelines on how other developers can contribute to your project.',
+    message: 'Provide guidelines on how other developers can contribute to your project (if applicable).',
   },
   {
     type: 'input',
     name: 'tests',
-    message: 'If applicable, provide any examples on how to run your application.',
+    message: 'Provide any examples on how to run your application (if applicable).',
   },
   {
     type: 'list',
@@ -60,16 +58,14 @@ const questions = [
   {
     type: 'input',
     name: 'questions',
-    message: {
-      gitHUb: 'What is your GitHub username?',
-      email: 'What is your Email address?',
-    },
-    validate: function (answer) {
-      if (answer.length < 1) {
-        return console.log("A valid information is required.");
-      }
-      return true;
-    }
+    message: 'What is your GitHub username?',
+    default: 'SoradaW'
+  },
+  {
+    type: 'input',
+    name: 'questions',
+    message: 'What is your email address?',
+    default: 'sorada.wright@gmail.com'
   }
 ];
 
