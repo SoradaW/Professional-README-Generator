@@ -4,7 +4,7 @@ const path = require('path');
 const util = require('util');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown.js"); //internal
-const gitHubURL = require('./utils/githuburl.js'); //internal
+const gitHubURL = require('./utils/githubURL.js'); //internal
 
 // array of questions prompts for user responses
 const questions = [
