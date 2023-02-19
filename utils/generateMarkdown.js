@@ -34,10 +34,6 @@ function generateMarkdown(userResponses, userGitHubLink) {
   // table of contents 
   draftMarkdown += tableOfContents;
 
-  // always had license link to section as it required
-  //draftMarkdown += `
-  //* [License](#license)`;
-
   // if applicable questions
   // installation section
   if (userResponses.installation !== '') {

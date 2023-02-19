@@ -1,6 +1,5 @@
 // fs is a Node standard library package for reading and writing files
 const fs = require("fs");
-const path = require('path');
 const util = require('util');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown.js"); //internal
@@ -93,8 +92,6 @@ async function init() {
     // await makes a function wait for a Promise
     const userResponses = await inquirer.prompt(questions);
     console.log("Your responses: ", userResponses);
-    console.log("Thank you for your responses! Fecthing your GitHub data next...");
-
 
     // pass inquirer userResponses and GitHub userInfo to generateMarkdown
     console.log("Generating your README next...")

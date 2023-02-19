@@ -6,7 +6,7 @@ When creating an open source project on GitHub, it’s important to have a high-
 
 We can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project.
 
-This project is to create a command-line application that dynamically generates a professional README.md file from a user's input. Check out [demoREADME](https://github.com/SoradaW/Professional-README-Generator/blob/main/demoREADME.md) as an example.
+This project is to create a command-line application that dynamically generates a professional README.md file from a user's input. Check out this [README](https://github.com/SoradaW/Professional-README-Generator/blob/main/demoREADME.md) as an example.
  
 ## Application's functionality
 
@@ -47,9 +47,11 @@ Here are some guidelines to help you get started:
 
 * A walkthrough video demonstrating the functionality of the application.
 
-* A sample README.md file for a project repository generated using your application
+[Demo]()
 
-* The URL of the GitHub repository, with a unique name and a README describing the project
+* A sample README.md file for a project repository generated using the application click [here](https://github.com/SoradaW/Professional-README-Generator/blob/main/demoREADME.md).
+
+* Any questions please send me an [email](sorada.wright@gmail.com).
 
 ---
 
