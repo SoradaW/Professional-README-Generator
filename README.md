@@ -55,7 +55,7 @@ Here are some guidelines to help you get started:
 
 * A walkthrough video demonstrating the functionality of the application.
 
-[Demo](https://drive.google.com/file/d/1QSz1xmeCGKgf7HAHf8Jnfw04otG2o8nD/view?usp=share_link)
+![Demo](/images/Demo-README-Generator.gif)
 
 * A sample README.md file for a project repository generated using the application click [here](https://github.com/SoradaW/Professional-README-Generator/blob/main/demoREADME.md).
 
