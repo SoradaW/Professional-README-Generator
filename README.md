@@ -53,13 +53,17 @@ Here are some guidelines to help you get started:
 
 ## Review
 
-* A walkthrough video demonstrating the functionality of the application.
+* A walkthrough video demonstrating the functionality of the application
 
 ![Demo](/images/Demo-README-Generator.gif)
 
-* A sample README.md file for a project repository generated using the application click [here](https://github.com/SoradaW/Professional-README-Generator/blob/main/demoREADME.md).
+* A sample README.md file for a project repository generated using the application click [here](https://github.com/SoradaW/Professional-README-Generator/blob/main/demoREADME.md)
 
-* Any questions please send me an [email](sorada.wright@gmail.com).
+* Any questions please send me an [email](sorada.wright@gmail.com)
+
+## License
+
+This project under the terms of MIT License
 
 ---
 
