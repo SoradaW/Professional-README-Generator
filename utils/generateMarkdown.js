@@ -95,7 +95,7 @@ function generateMarkdown(userResponses, userGitHubLink) {
 
   ## Questions?
 
-  *Take a look at* [My Github](${userResponses.github})
+  *Take a look at* [My GitHub](${userResponses.github})
 
   *Any futher questions, please* [Email Me](${userResponses.questions})
   `

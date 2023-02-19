@@ -6,14 +6,9 @@ When creating an open source project on GitHub, it’s important to have a high-
 
 We can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project.
 
-This project is to create a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer).
+This project is to create a command-line application that dynamically generates a professional README.md file from a user's input. Check out [demoREADME](https://github.com/SoradaW/Professional-README-Generator/blob/main/demoREADME.md) as an example.
  
-The application will be invoked by using the following command:
-
-```bash
-node index.js
-```
-## Acceptance Criteria
+## Application's functionality
 
 * Create a command-line application that accepts user input.
   * When a user is prompted for information about the application repository then a high-quality, professional README.md is generated with:
@@ -34,13 +29,19 @@ node index.js
     * When a user enters their email address then this is added to the section of the README entitled Questions, with instructions on how to reach them with additional questions
     * When a user clicks on the links in the **Table of Contents** then they are taken to the corresponding section of the README
 
-## Getting Started
+## Installation
 
 Here are some guidelines to help you get started:
+
+* Create new repository in GitHub, then `git clone` to your local.
 
 * Create a `.gitignore` file and include `node_modules/` and `.DS_Store/` so that your `node_modules` directory isn't tracked or uploaded to GitHub. Be sure to create your `.gitignore` file before installing any npm dependencies.
 
 * Make sure that your repo includes a `package.json` with the required dependencies. You can create one by running `npm init` when you first set up the project, before installing any dependencies.
+
+* Run `npm install inquirer` to copy library for inquirer into `node_modules` this npm package dependencies will prompt you for your inputs from the command line.
+
+* The application will be invoked by using `node index.js` command.
 
 ## Review
 
