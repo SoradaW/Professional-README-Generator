@@ -43,11 +43,19 @@ Here are some guidelines to help you get started:
 
 * The application will be invoked by using `node index.js` command.
 
+## Usage
+
+* When you run `node index.js`, the application uses the `inquirer` package to prompt you in the command line with a series of questions about your GitHub and your project.
+
+* Then the application will generate markdown and a table of contents for the README based on your responses to the inquirer prompts questions, this including license badge.
+
+* `fs.writeFile` then generated your project's README.md file.
+
 ## Review
 
 * A walkthrough video demonstrating the functionality of the application.
 
-[Demo]()
+[Demo](https://drive.google.com/file/d/1QSz1xmeCGKgf7HAHf8Jnfw04otG2o8nD/view?usp=share_link)
 
 * A sample README.md file for a project repository generated using the application click [here](https://github.com/SoradaW/Professional-README-Generator/blob/main/demoREADME.md).
 

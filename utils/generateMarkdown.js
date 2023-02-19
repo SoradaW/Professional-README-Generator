@@ -24,6 +24,8 @@ function generateMarkdown(userResponses, userGitHubLink) {
 
   ![Badge of repo license](https://img.shields.io/badge/License-${userResponses.license}-yellowgreen.svg)
 
+  Check out the badge hosted by [shields.io](https://shields.io/).
+  
   ## Description
 
   *The what, why, and how:*
